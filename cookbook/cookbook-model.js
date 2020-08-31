@@ -8,7 +8,7 @@ function getShoppingList(recipe_id) {
   return db("cookbook as cb")
     .join("ingredients as i", "cb.ingredient_id", "i.id")
     .select(
-      "i.ingredients_name",
+      "i.ingredient_name",
       "cb.quantity",
       "cb.measurement",
       "cb.recipe_id"

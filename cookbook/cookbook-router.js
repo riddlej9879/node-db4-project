@@ -15,6 +15,7 @@ router.get("/", async (req, res, next) => {
   }
 });
 router.get("/:id/shopping_list", async (req, res, next) => {
+  console.log(req.params.id);
   try {
     const data = await db.getShoppingList(req.params.id);
     res.json(data);
